@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^localhost$ [NC,OR]
+RewriteCond %{REQUEST_URI} !app/
+RewriteRule (.*) /app/$1 [L]
